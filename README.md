@@ -42,20 +42,6 @@ npm run build
 
 The `dist/` folder is a static site ready for deployment to Vercel, Netlify, or any static host.
 
-### Deploy to Vercel
-
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com), import the repo
-3. Vercel auto-detects Vite — click Deploy
-4. Add your custom domain in Settings → Domains
-
-### Connect Dynadot Domain
-
-1. In Vercel → project → Settings → Domains → add `namewright.xyz`
-2. Copy the nameservers Vercel provides
-3. In Dynadot → My Domains → `namewright.xyz` → DNS Settings → Name Servers
-4. Paste Vercel nameservers → Save
-5. Wait 10-30 min for propagation. SSL is automatic.
 
 ## Tech Stack
 
