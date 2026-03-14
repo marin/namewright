@@ -1,0 +1,86 @@
+:root {
+  --accent: #c9a55a;
+  --accent-dim: #8a7038;
+  --accent-glow: rgba(201, 165, 90, 0.12);
+  --fg: #e8e4dd;
+  --fg-dim: #8a877f;
+  --bg: #0a0a0c;
+  --surface: #141417;
+  --surface-alt: #1a1a1f;
+  --border: #2a2a30;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-body: "DM Sans", "Helvetica Neue", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+@keyframes neFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes nePulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.ne-fade-up {
+  animation: neFadeUp 0.6s ease;
+}
+
+.ne-msg {
+  animation: neFadeUp 0.35s ease;
+}
